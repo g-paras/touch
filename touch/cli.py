@@ -1,14 +1,24 @@
+'''Implementation of touch command'''
+
 from sys import argv
 
 
 def create_file():
-    try:
-        file_name = argv[1]
-        open(file_name, 'a').close()
-    except IndexError:
-        print('''Filename missing
-Correct Syntax:
-$ touch <filename>''')
+    # get all the arguments
+    files = argv[1:]
+
+    # print error message and return none if no arguments
+    if not len(files):
+        print("Filename missing")
+        return
+
+    # iterate over all the file names and create
+    for file in files:
+        try:
+            open(file, 'a').close()
+        except FileNotFoundError:
+            print(f"'{file}' is invalid path")
+            return
 
     return
 
