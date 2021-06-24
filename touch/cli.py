@@ -17,7 +17,7 @@ def create_file():
         try:
             open(file, 'a').close()
         except FileNotFoundError:
-            print(f"'{file}' is invalid path")
+            print(f"'{file}' is an invalid path")
             return
 
     return

@@ -22,4 +22,4 @@ touch <filename/s>
 
 
 ### Running into issues
-Let me know if you are running into any error or create new issue in the issue tab
+Let me know if you are running into any error by creating new issue in the issue tab
