@@ -10,6 +10,9 @@ setup(
     author_email="guptaparas039@gmail.com",
     description="touch command for Windows",
     entry_points={
-        'console_scripts': ['touch=touch.cli:create_file'],
+        'console_scripts': [
+            'touch=touch.cli:create_file',
+            'cat=touch.cli:read_file'
+        ],
     }
 )
