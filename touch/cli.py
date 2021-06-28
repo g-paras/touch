@@ -23,5 +23,22 @@ def create_file():
     return
 
 
+def read_file():
+    if len(argv) != 2:
+        print("Too many values to unpack" if len(
+            argv) > 1 else "Filename missing")
+        return
+    else:
+        filename = argv[1]
+        try:
+            with open(filename) as file:
+                print(file.read())
+        except FileNotFoundError:
+            print(f"{filename} does not exist")
+        except PermissionError:
+            print("Access denied")
+    return
+
+
 if __name__ == "__main__":
     create_file()
